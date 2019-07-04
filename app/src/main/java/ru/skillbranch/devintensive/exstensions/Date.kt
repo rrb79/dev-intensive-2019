@@ -35,5 +35,6 @@ enum class TimeUnits {
     DAY
 }
 fun Date.humanizeDiff(date:Date=Date()):String{
-    TODO("not ")
+    return "Last date "
+
 }

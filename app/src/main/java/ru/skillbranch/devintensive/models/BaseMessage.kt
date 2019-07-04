@@ -2,6 +2,7 @@ package ru.skillbranch.devintensive.models
 
 import java.util.*
 
+
 abstract class BaseMessage(
     val id: String,
     val from: User?,
@@ -9,13 +10,15 @@ abstract class BaseMessage(
     val isIncoming: Boolean = false,
     val date: Date = Date()
 ) {
-    abstract fun formatMassage(): String
+    abstract fun formatMessage(): String
 
     companion object AbstractFactory {
-        var lastid = -1;
+        var lastid = -1
         fun makeMessage(
             from: User?,
-            chat: Chat, date: Date = Date(), type: String = "text",
+            chat: Chat,
+            date: Date = Date(),
+            type: String = "text",
             payload: Any?
         ): BaseMessage {
             lastid++
@@ -24,5 +27,6 @@ abstract class BaseMessage(
                 else -> TextMassege("$lastid", from, chat, date = date, text = payload as String)
             }
         }
+
     }
 }
