@@ -1,4 +1,4 @@
-package ru.skillbranch.devintensive.exstensions
+package ru.skillbranch.devintensive.extensions
 
 fun getFirstLetter(anyText: String?): String? {
 //   var strToProcess: String? = anyText!!.replace(" ", "")

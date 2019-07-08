@@ -13,6 +13,8 @@ data class User(
     var lastVisit : Date? = Date(),
     var isOnline : Boolean = false
 ) {
+
+
     constructor(id: String, firstName: String?, lastName: String?) : this(
         id = id,
         firstName = firstName,
@@ -37,6 +39,7 @@ data class User(
             return User(id = "$lastId", firstName = firstName, lastName = lastName)
         }
     }
+
 }
 
 

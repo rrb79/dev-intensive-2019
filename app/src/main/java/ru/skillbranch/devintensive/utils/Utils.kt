@@ -1,14 +1,17 @@
 package ru.skillbranch.devintensive.utils
 
-import ru.skillbranch.devintensive.exstensions.getFirstLetter
-import ru.skillbranch.devintensive.exstensions.getTranlitLetter
+import ru.skillbranch.devintensive.extensions.getFirstLetter
+import ru.skillbranch.devintensive.extensions.getTranlitLetter
 
 object Utils {
     fun parseFullName(fullName: String?): Pair<String?, String?> {
-
+      //  var fullName: String?=fullName?.toRegex(" ")
         val parts: List<String>? = fullName?.split(" ")
+
         val firstName = parts?.getOrNull(0)
         val lastName = parts?.getOrNull(1)
+        println(firstName)
+        println(lastName)
 
         return firstName to lastName
 
@@ -39,3 +42,4 @@ object Utils {
     }
 
 }
+
