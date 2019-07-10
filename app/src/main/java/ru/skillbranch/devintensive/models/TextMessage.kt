@@ -3,7 +3,7 @@ package ru.skillbranch.devintensive.models
 import ru.skillbranch.devintensive.extensions.humanizeDiff
 import java.util.*
 
-class TextMassege(
+class TextMessage(
     id: String,
     from: User?,
     chat: Chat,

@@ -19,12 +19,13 @@ abstract class BaseMessage(
             chat: Chat,
             date: Date = Date(),
             type: String = "text",
-            payload: Any?
+            payload: Any?,
+            b: Boolean=true
         ): BaseMessage {
             lastid++
             return when (type) {
                 "image" -> ImageMessage("$lastid", from, chat, date = date, image = payload as String)
-                else -> TextMassege("$lastid", from, chat, date = date, text = payload as String)
+                else -> TextMessage("$lastid", from, chat, date = date, text = payload as String)
             }
         }
 
